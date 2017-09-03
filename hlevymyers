@@ -1,0 +1,26 @@
+## the first function creates a special "matrix" object that can cache its inverse
+## the second function computes the inverse of the special "matrix" returned by
+## the first function.  If the inverse has already been calculated then it will
+## retreive the cached inverse.
+
+## The first function that creates a matrix object
+
+makeCacheMatrix <- function(x = matrix()){
+  m <- matrix(c(-4, 0, 8, 3, 1, 2, 5, 7, 9), ncol = 3, byrow = TRUE)
+}
+  m
+  
+is.matrix(m)
+
+
+## This second function computes the inverse of the first matrix. If the inverse 
+## has already been calculated then the cacheSolve will retrieve the inverse from 
+## cache.
+
+cacheSolve <- function(x, makeCacheMatrix) 
+  ## Return a matrix that is the inverse of 'x'
+        matrixsol <- solve(m)
+        print("Solving matrix. Here is the solution:")
+        matrixsol
+
+
